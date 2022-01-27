@@ -1,0 +1,167 @@
+<Card_Item@MDCard>:
+    card_img: 'droplet.png'
+    card_text: ""
+    size_hint_y: None
+    height: '80dp'
+    elevation: 0
+    MDBoxLayout:
+        FitImage:
+            source: root.card_img
+            size_hint: None, None
+            size: '60dp','60dp'
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+        MDLabel:
+            text: root.card_text
+            markup: True
+            font_size: '14sp'
+
+<Toolbar@MDBoxLayout>:
+    #adaptive_height: True
+    size_hint_y: None
+    height: '70dp'
+    padding: ('10dp', '10dp', '10dp', '10dp')
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        MDIconButton:
+            icon: 'home'
+            theme_text_color: 'Custom'
+            text_color: 216/255,217/255,224/255,1
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        MDIconButton:
+            icon: 'chart-arc'
+            theme_text_color: 'Custom'
+            text_color: 216/255,217/255,224/255,1
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        MDIconButton:
+            icon: 'plus'
+            md_bg_color: 118/255,73/255,234/255,1
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        MDIconButton:
+            icon: 'briefcase-download'
+            theme_text_color: 'Custom'
+            text_color: 216/255,217/255,224/255,1
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y: 'center'
+        MDIconButton:
+            icon: 'account'
+            theme_text_color: 'Custom'
+            text_color: 216/255,217/255,224/255,1
+
+<Screen1>:
+    md_bg_color: 1,1,1,1
+    MDBoxLayout:
+        orientation: 'vertical'
+        spacing: '20dp'
+        Carousel:
+            #scroll_timeout: 0
+            MDBoxLayout:
+                orientation: 'vertical'
+                padding: ('20dp', '50dp', '20dp', '0dp')
+                MDRelativeLayout:
+                    size_hint_y: None
+                    height: '230dp'
+                    MDFloatLayout:
+                        line_thickness: 15
+                        circle_wide: 120
+                        circle_spacing: 40
+                        canvas:
+                            Color:
+                                rgba: 250/255,250/255,252/255,1
+                            Line:
+                                circle: self.center_x,self.center_y,self.circle_wide
+                                width: self.line_thickness
+                            Color:
+                                rgba: 64/255,226/255,208/255,1
+                            Line:
+                                circle: self.center_x,self.center_y,self.circle_wide,-40,150
+                                width: self.line_thickness
+                            Color:
+                                rgba: 250/255,250/255,252/255,1
+                            Line:
+                                circle: self.center_x,self.center_y,self.circle_wide+self.circle_spacing
+                                width: self.line_thickness
+                            Color:
+                                rgba: 118/255,73/255,234/255,1
+                            Line:
+                                circle: self.center_x,self.center_y,self.circle_wide+self.circle_spacing,0,270
+                                width: self.line_thickness
+                    Label:
+                        text: "[b][size=30sp]298[/size][/b][color=#D8D9E0]\nmg/dl[/color]"
+                        markup: True
+                        color: 0,0,0,1
+                        halign: 'center'
+                        font_size: '20sp'
+                MDBoxLayout:
+                    spacing: '20dp'
+                    adaptive_height: True
+                    padding: ('0dp', '0dp', '0dp', '40dp')
+                    MDCard:
+                        size_hint_y: None
+                        height: '60dp'
+                        elevation: 0
+                        MDBoxLayout:
+                            MDFloatLayout:
+                                size_hint_x: None
+                                width: 60
+                                canvas:
+                                    Color:
+                                        rgba: 118/255,73/255,234/255,1
+                                    Ellipse:
+                                        pos: self.center_x, self.center_y
+                                        size: 20,20
+                            MDLabel:
+                                text: "[color=#D8D9E0]Current result[/color]\n298 [color=#D8D9E0]mg/dl[/color]"
+                                markup: True
+                    MDCard:
+                        size_hint_y: None
+                        height: '60dp'
+                        elevation: 0
+                        MDBoxLayout:
+                            MDFloatLayout:
+                                size_hint_x: None
+                                width: 60
+                                canvas:
+                                    Color:
+                                        rgba: 64/255,226/255,208/255,1
+                                    Ellipse:
+                                        pos: self.center_x, self.center_y
+                                        size: 20,20
+                            MDLabel:
+                                text: "[color=#D8D9E0]Weekly avergae[/color]\n190 [color=#D8D9E0]mg/dl[/color]"
+                                markup: True
+                ScrollView:
+                    MDBoxLayout:
+                        md_bg_color: 250/255,250/255,252/255,1
+                        adaptive_height: True
+                        orientation: 'vertical'
+                        spacing: '15dp'
+                        Card_Item:
+                            card_text: "This seems your Diabetes level is [color=#0000FF]high[/color]\nyou must take care of your Health"
+                        Card_Item:
+                            card_text: "Take your medicine regularly as recommended by doctor."
+                        Card_Item:
+                            card_text: "Do Aerobic exercise daily in the\nmorning."
+            #Screen1
+            
+            MDBoxLayout:
+                orientation: 'vertical'
+                spacing: '20dp'
+                MDIconButton:
+                    icon: 'arrow-left'
+                MDLabel:
+                    text: "Weekly Diabetes stats"
+                    font_size: '20sp'
+                MDRelativeLayout:
+                    size_hint_y: None
+                    height: '400dp'
+                    MDBoxLayout:
+                        orientation:
+        Toolbar:
